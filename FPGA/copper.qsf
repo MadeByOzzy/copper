@@ -49,8 +49,27 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name BDF_FILE copper.bdf
 set_location_assignment PIN_U7 -to KEY0
+set_location_assignment PIN_W9 -to KEY1
+set_location_assignment PIN_M7 -to KEY2
+set_location_assignment PIN_M6 -to KEY3
+set_location_assignment PIN_P22 -to RESET_N
 set_location_assignment PIN_AA2 -to LEDR0
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_AA1 -to LEDR1
+set_location_assignment PIN_W2 -to LEDR2
+set_location_assignment PIN_Y3 -to LEDR3
+set_location_assignment PIN_N2 -to LEDR4
+set_location_assignment PIN_N1 -to LEDR5
+set_location_assignment PIN_U2 -to LEDR6
+set_location_assignment PIN_U1 -to LEDR7
+set_location_assignment PIN_L2 -to LEDR8
+set_location_assignment PIN_L1 -to LEDR9
+set_location_assignment PIN_M9 -to CLOCK_50
+set_location_assignment PIN_H13 -to CLOCK2_50
+set_location_assignment PIN_E10 -to CLOCK3_50
+set_location_assignment PIN_V15 -to CLOCK4_50
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE library/OneSecondPeriodPulse.v
+set_global_assignment -name VERILOG_FILE library/General27bitCounter.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

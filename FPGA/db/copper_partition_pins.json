@@ -8,7 +8,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "LEDR1",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR2",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR3",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR4",
+					"strict" : false
+				},
+				{
 					"name" : "KEY0",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "RESET_N",
 					"strict" : false
 				}
 			]
