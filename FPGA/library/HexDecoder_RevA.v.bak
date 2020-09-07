@@ -1,0 +1,13 @@
+
+// takes 4 bit input dataIn
+// returns hexadecimal char bits for 7 segment display out
+module HexDecoder_RevA(clk, rst, dataIn, dispOut);
+
+input clk, rst;
+input [3:0] dataIn;
+output reg [6:0] dispOut;
+
+
+
+
+endmodule

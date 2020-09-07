@@ -20,6 +20,7 @@ begin
 	
 	else begin
 	
+		// 25'd25000000
 		if (count > 25000000) begin
 			out <= !out;
 			count <= 0;

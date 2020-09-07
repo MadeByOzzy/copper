@@ -1,5 +1,5 @@
 Analysis & Synthesis report for copper
-Wed Sep 02 21:35:45 2020
+Mon Sep 07 15:58:15 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -44,14 +44,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Sep 02 21:35:45 2020       ;
+; Analysis & Synthesis Status     ; Successful - Mon Sep 07 15:58:15 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; copper                                      ;
 ; Top-level Entity Name           ; copper                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 53                                          ;
-; Total pins                      ; 19                                          ;
+; Total registers                 ; 137                                         ;
+; Total pins                      ; 61                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -176,6 +176,10 @@ https://fpgasoftware.intel.com/eula.
 ; copper.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/copper.bdf                     ;         ;
 ; library/OneSecondPeriodPulse.v   ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/OneSecondPeriodPulse.v ;         ;
 ; library/General27bitCounter.v    ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/General27bitCounter.v  ;         ;
+; library/SevenSegmentDisplay.v    ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/SevenSegmentDisplay.v  ;         ;
+; library/General42bitCounter.v    ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/General42bitCounter.v  ;         ;
+; library/HexDecoder_Core.v        ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_Core.v      ;         ;
+; library/HexDecoder_RevB.v        ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevB.v      ;         ;
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
 
 
@@ -184,37 +188,45 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 32             ;
+; Estimate of Logic utilization (ALMs needed) ; 74             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 60             ;
+; Combinational ALUT usage for logic          ; 143            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 3              ;
-;     -- 5 input functions                    ; 3              ;
-;     -- 4 input functions                    ; 1              ;
-;     -- <=3 input functions                  ; 53             ;
+;     -- 6 input functions                    ; 4              ;
+;     -- 5 input functions                    ; 1              ;
+;     -- 4 input functions                    ; 44             ;
+;     -- <=3 input functions                  ; 94             ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 53             ;
+; Dedicated logic registers                   ; 137            ;
 ;                                             ;                ;
-; I/O pins                                    ; 19             ;
+; I/O pins                                    ; 61             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 53             ;
-; Total fan-out                               ; 325            ;
-; Average fan-out                             ; 2.15           ;
+; Maximum fan-out                             ; 137            ;
+; Total fan-out                               ; 909            ;
+; Average fan-out                             ; 2.26           ;
 +---------------------------------------------+----------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name          ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------------+--------------+
-; |copper                         ; 60 (0)              ; 53 (0)                    ; 0                 ; 0          ; 19   ; 0            ; |copper                            ; copper               ; work         ;
-;    |General27bitCounter:inst3|  ; 27 (27)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|General27bitCounter:inst3  ; General27bitCounter  ; work         ;
-;    |OneSecondPeriodPulse:inst2| ; 33 (33)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|OneSecondPeriodPulse:inst2 ; OneSecondPeriodPulse ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Entity Name          ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+----------------------+--------------+
+; |copper                         ; 143 (0)             ; 137 (0)                   ; 0                 ; 0          ; 61   ; 0            ; |copper                                             ; copper               ; work         ;
+;    |General27bitCounter:inst3|  ; 27 (27)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|General27bitCounter:inst3                   ; General27bitCounter  ; work         ;
+;    |General42bitCounter:inst13| ; 42 (42)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|General42bitCounter:inst13                  ; General42bitCounter  ; work         ;
+;    |HexDecoder_RevB:inst7|      ; 42 (0)              ; 42 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7                       ; HexDecoder_RevB      ; work         ;
+;       |HexDecoder_Core:inst0|   ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst0 ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:inst1|   ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst1 ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:inst2|   ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst2 ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:inst3|   ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst3 ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:inst4|   ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst4 ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:inst5|   ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst5 ; HexDecoder_Core      ; work         ;
+;    |OneSecondPeriodPulse:inst2| ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|OneSecondPeriodPulse:inst2                  ; OneSecondPeriodPulse ; work         ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -223,9 +235,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 53    ;
-; Number of registers using Synchronous Clear  ; 53    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 137   ;
+; Number of registers using Synchronous Clear  ; 95    ;
+; Number of registers using Synchronous Load   ; 42    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
@@ -233,13 +245,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |copper|OneSecondPeriodPulse:inst2|count[1] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |copper|OneSecondPeriodPulse:inst2|count[17] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -247,21 +259,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 53                          ;
-;     SCLR              ; 53                          ;
-; arriav_lcell_comb     ; 61                          ;
-;     arith             ; 52                          ;
-;         1 data inputs ; 52                          ;
-;     normal            ; 9                           ;
+; arriav_ff             ; 137                         ;
+;     SCLR              ; 95                          ;
+;     SLD               ; 42                          ;
+; arriav_lcell_comb     ; 144                         ;
+;     arith             ; 94                          ;
+;         1 data inputs ; 94                          ;
+;     normal            ; 50                          ;
 ;         0 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 3                           ;
-;         6 data inputs ; 3                           ;
-; boundary_port         ; 19                          ;
+;         4 data inputs ; 44                          ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 4                           ;
+; boundary_port         ; 61                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.60                        ;
-; Average LUT depth     ; 2.66                        ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 2.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -280,7 +292,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Sep 02 21:35:28 2020
+    Info: Processing started: Mon Sep 07 15:57:59 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off copper -c copper
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -290,7 +302,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file library
     Info (12023): Found entity 1: OneSecondPeriodPulse File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/OneSecondPeriodPulse.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file library/general27bitcounter.v
     Info (12023): Found entity 1: General27bitCounter File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/General27bitCounter.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file library/sevensegmentdisplay.v
+    Info (12023): Found entity 1: SevenSegmentDisplay_RevA File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/SevenSegmentDisplay.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file library/hexdecoder_reva.v
+    Info (12023): Found entity 1: HexDecoder_RevA File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevA.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file library/general42bitcounter.v
+    Info (12023): Found entity 1: General42bitCounter File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/General42bitCounter.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file library/hexdecoder_core.v
+    Info (12023): Found entity 1: HexDecoder_Core File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_Core.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file library/hexdecoder_revb.v
+    Info (12023): Found entity 1: HexDecoder_RevB File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevB.v Line: 2
 Info (12127): Elaborating entity "copper" for the top level hierarchy
+Warning (275080): Converted elements in bus name "HEX0" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "HEX0[6..0]" to "HEX06..0"
+Warning (275080): Converted elements in bus name "HEX1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "HEX1[6..0]" to "HEX16..0"
+Warning (275080): Converted elements in bus name "HEX2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "HEX2[6..0]" to "HEX26..0"
+Warning (275080): Converted elements in bus name "HEX3" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "HEX3[6..0]" to "HEX36..0"
+Warning (275080): Converted elements in bus name "HEX4" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "HEX4[6..0]" to "HEX46..0"
+Warning (275080): Converted elements in bus name "HEX5" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "HEX5[6..0]" to "HEX56..0"
 Warning (275043): Pin "LEDR5" is missing source
 Warning (275043): Pin "LEDR6" is missing source
 Warning (275043): Pin "LEDR7" is missing source
@@ -303,9 +337,13 @@ Warning (275009): Pin "CLOCK2_50" not connected
 Warning (275009): Pin "CLOCK3_50" not connected
 Warning (275009): Pin "CLOCK4_50" not connected
 Info (12128): Elaborating entity "OneSecondPeriodPulse" for hierarchy "OneSecondPeriodPulse:inst2"
-Warning (10230): Verilog HDL assignment warning at OneSecondPeriodPulse.v(29): truncated value with size 32 to match size of target (25) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/OneSecondPeriodPulse.v Line: 29
+Warning (10230): Verilog HDL assignment warning at OneSecondPeriodPulse.v(30): truncated value with size 32 to match size of target (25) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/OneSecondPeriodPulse.v Line: 30
 Info (12128): Elaborating entity "General27bitCounter" for hierarchy "General27bitCounter:inst3"
 Warning (10230): Verilog HDL assignment warning at General27bitCounter.v(16): truncated value with size 32 to match size of target (27) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/General27bitCounter.v Line: 16
+Info (12128): Elaborating entity "HexDecoder_RevB" for hierarchy "HexDecoder_RevB:inst7"
+Info (12128): Elaborating entity "HexDecoder_Core" for hierarchy "HexDecoder_RevB:inst7|HexDecoder_Core:inst0" File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevB.v Line: 14
+Info (12128): Elaborating entity "General42bitCounter" for hierarchy "General42bitCounter:inst13"
+Info (12128): Elaborating entity "SevenSegmentDisplay_RevA" for hierarchy "SevenSegmentDisplay_RevA:inst1"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR5" is stuck at GND
     Warning (13410): Pin "LEDR6" is stuck at GND
@@ -322,14 +360,14 @@ Warning (21074): Design contains 6 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CLOCK2_50"
     Warning (15610): No output dependent on input pin "CLOCK3_50"
     Warning (15610): No output dependent on input pin "CLOCK4_50"
-Info (21057): Implemented 79 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 204 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 60 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4870 megabytes
-    Info: Processing ended: Wed Sep 02 21:35:45 2020
-    Info: Elapsed time: 00:00:17
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 143 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Mon Sep 07 15:58:15 2020
+    Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:36
 
 
