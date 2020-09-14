@@ -1,5 +1,5 @@
 Fitter report for copper
-Mon Sep 07 15:58:53 2020
+Sun Sep 13 19:02:40 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Mon Sep 07 15:58:53 2020       ;
+; Fitter Status                   ; Successful - Sun Sep 13 19:02:40 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; copper                                      ;
 ; Top-level Entity Name           ; copper                                      ;
@@ -158,7 +158,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.5%      ;
+;     Processor 2            ;   0.6%      ;
 ;     Processor 3            ;   0.5%      ;
 ;     Processor 4            ;   0.5%      ;
 ;     Processor 5            ;   0.5%      ;
@@ -1034,23 +1034,23 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------+-------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                ;
-+---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node      ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Entity Name          ; Library Name ;
-+---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------+----------------------+--------------+
-; |copper                         ; 74.5 (0.5)           ; 81.5 (0.5)                       ; 7.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 144 (1)             ; 137 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 61   ; 0            ; |copper                                             ; copper               ; work         ;
-;    |General27bitCounter:inst3|  ; 13.5 (13.5)          ; 15.5 (15.5)                      ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 27 (27)             ; 27 (27)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|General27bitCounter:inst3                   ; General27bitCounter  ; work         ;
-;    |General42bitCounter:inst13| ; 21.0 (21.0)          ; 26.0 (26.0)                      ; 5.0 (5.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 42 (42)             ; 42 (42)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|General42bitCounter:inst13                  ; General42bitCounter  ; work         ;
-;    |HexDecoder_RevB:inst7|      ; 21.0 (0.0)           ; 21.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 42 (0)              ; 42 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7                       ; HexDecoder_RevB      ; work         ;
-;       |HexDecoder_Core:inst0|   ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst0 ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:inst1|   ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst1 ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:inst2|   ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst2 ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:inst3|   ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst3 ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:inst4|   ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst4 ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:inst5|   ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst5 ; HexDecoder_Core      ; work         ;
-;    |OneSecondPeriodPulse:inst2| ; 18.5 (18.5)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|OneSecondPeriodPulse:inst2                  ; OneSecondPeriodPulse ; work         ;
-+---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------+----------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node               ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                            ; Entity Name          ; Library Name ;
++------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
+; |copper                                  ; 74.5 (0.5)           ; 81.5 (0.5)                       ; 7.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 144 (1)             ; 137 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 61   ; 0            ; |copper                                                        ; copper               ; work         ;
+;    |General27bitCounter:inst3|           ; 13.5 (13.5)          ; 15.5 (15.5)                      ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 27 (27)             ; 27 (27)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|General27bitCounter:inst3                              ; General27bitCounter  ; work         ;
+;    |General42bitCounter:inst13|          ; 21.0 (21.0)          ; 26.0 (26.0)                      ; 5.0 (5.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 42 (42)             ; 42 (42)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|General42bitCounter:inst13                             ; General42bitCounter  ; work         ;
+;    |HexDecoder_RevC:inst8|               ; 21.0 (0.0)           ; 21.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 42 (0)              ; 42 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8                                  ; HexDecoder_RevC      ; work         ;
+;       |HexDecoder_Core:makeCore[0].inst| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[1].inst| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[2].inst| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[3].inst| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[4].inst| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[5].inst| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst ; HexDecoder_Core      ; work         ;
+;    |OneSecondPeriodPulse:inst2|          ; 18.5 (18.5)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|OneSecondPeriodPulse:inst2                             ; OneSecondPeriodPulse ; work         ;
++------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1123,135 +1123,135 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                              ;
-+---------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                           ; Pad To Core Index ; Setting ;
-+---------------------------------------------------------------+-------------------+---------+
-; KEY1                                                          ;                   ;         ;
-; KEY2                                                          ;                   ;         ;
-; KEY3                                                          ;                   ;         ;
-; CLOCK2_50                                                     ;                   ;         ;
-; CLOCK3_50                                                     ;                   ;         ;
-; CLOCK4_50                                                     ;                   ;         ;
-; KEY0                                                          ;                   ;         ;
-;      - LEDR0~output                                           ; 1                 ; 0       ;
-; CLOCK_50                                                      ;                   ;         ;
-; RESET_N                                                       ;                   ;         ;
-;      - General27bitCounter:inst3|counter[6]                   ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[26]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[25]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[24]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[9]                   ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[7]                   ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[8]                   ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[10]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[11]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[12]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[1]                   ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[13]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[14]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[15]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[16]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[17]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[18]                  ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[17]                 ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[19]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[20]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[21]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[22]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[23]                  ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[2]                   ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[3]                   ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[4]                   ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[5]                   ; 1                 ; 0       ;
-;      - General27bitCounter:inst3|counter[0]                   ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[18]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[19]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[20]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[21]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[22]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[23]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[24]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[25]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[26]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[27]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[28]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[29]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[30]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[31]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[32]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[33]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[34]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[35]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[36]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[37]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[38]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[39]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[40]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[41]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[16]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[15]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[14]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[13]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[12]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[11]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[10]                 ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[9]                  ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[8]                  ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[7]                  ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[6]                  ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[5]                  ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[4]                  ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[3]                  ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[2]                  ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[1]                  ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[0]                  ; 1                 ; 0       ;
-;      - OneSecondPeriodPulse:inst2|out                         ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[0] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[1] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[2] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[3] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[4] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[5] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[6] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[0] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[1] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[2] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[3] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[4] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[5] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[6] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[0] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[1] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[3] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[4] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[2] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[5] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[6] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[0] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[1] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[2] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[3] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[4] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[5] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[6] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[0] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[1] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[2] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[3] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[4] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[5] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[6] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[0] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[1] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[2] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[3] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[4] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[5] ; 1                 ; 0       ;
-;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[6] ; 1                 ; 0       ;
-;      - OneSecondPeriodPulse:inst2|count[17]~0                 ; 1                 ; 0       ;
-+---------------------------------------------------------------+-------------------+---------+
++--------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                         ;
++--------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                      ; Pad To Core Index ; Setting ;
++--------------------------------------------------------------------------+-------------------+---------+
+; KEY1                                                                     ;                   ;         ;
+; KEY2                                                                     ;                   ;         ;
+; KEY3                                                                     ;                   ;         ;
+; CLOCK2_50                                                                ;                   ;         ;
+; CLOCK3_50                                                                ;                   ;         ;
+; CLOCK4_50                                                                ;                   ;         ;
+; KEY0                                                                     ;                   ;         ;
+;      - LEDR0~output                                                      ; 1                 ; 0       ;
+; CLOCK_50                                                                 ;                   ;         ;
+; RESET_N                                                                  ;                   ;         ;
+;      - General27bitCounter:inst3|counter[6]                              ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[26]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[25]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[24]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[9]                              ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[7]                              ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[8]                              ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[10]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[11]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[12]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[1]                              ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[13]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[14]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[15]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[16]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[17]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[18]                             ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[17]                            ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[19]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[20]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[21]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[22]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[23]                             ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[2]                              ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[3]                              ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[4]                              ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[5]                              ; 1                 ; 0       ;
+;      - General27bitCounter:inst3|counter[0]                              ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[18]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[19]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[20]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[21]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[22]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[23]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[24]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[25]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[26]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[27]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[28]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[29]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[30]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[31]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[32]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[33]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[34]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[35]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[36]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[37]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[38]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[39]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[40]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[41]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[16]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[15]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[14]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[13]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[12]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[11]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[10]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[9]                             ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[8]                             ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[7]                             ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[6]                             ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[5]                             ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[4]                             ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[3]                             ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[2]                             ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[1]                             ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[0]                             ; 1                 ; 0       ;
+;      - OneSecondPeriodPulse:inst2|out                                    ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[0] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[1] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[2] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[3] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[4] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[5] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[6] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[0] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[1] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[2] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[3] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[4] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[5] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[6] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[0] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[1] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[3] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[4] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[2] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[5] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[6] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[0] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[1] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[2] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[3] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[4] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[5] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[6] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[0] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[1] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[2] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[3] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[4] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[5] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[6] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[0] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[1] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[2] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[3] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[4] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[5] ; 1                 ; 0       ;
+;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[6] ; 1                 ; 0       ;
+;      - OneSecondPeriodPulse:inst2|count[17]~0                            ; 1                 ; 0       ;
++--------------------------------------------------------------------------+-------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1476,39 +1476,39 @@ Note: For more information on problematic transfers, consider running the Fitter
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                       ;
-+----------------------------------------+--------------------------------------------------------+-------------------+
-; Source Register                        ; Destination Register                                   ; Delay Added in ns ;
-+----------------------------------------+--------------------------------------------------------+-------------------+
-; OneSecondPeriodPulse:inst2|count[23]   ; OneSecondPeriodPulse:inst2|out                         ; 0.209             ;
-; General42bitCounter:inst13|counter[36] ; HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[3] ; 0.207             ;
-; General42bitCounter:inst13|counter[40] ; HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[6] ; 0.200             ;
-; General42bitCounter:inst13|counter[25] ; HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[5] ; 0.186             ;
-; General42bitCounter:inst13|counter[41] ; HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[2] ; 0.174             ;
-; General42bitCounter:inst13|counter[34] ; HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[3] ; 0.166             ;
-; General42bitCounter:inst13|counter[38] ; HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[2] ; 0.155             ;
-; General42bitCounter:inst13|counter[27] ; HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[6] ; 0.155             ;
-; General42bitCounter:inst13|counter[23] ; HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[5] ; 0.155             ;
-; OneSecondPeriodPulse:inst2|count[16]   ; OneSecondPeriodPulse:inst2|out                         ; 0.117             ;
-; OneSecondPeriodPulse:inst2|count[15]   ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[13]   ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[12]   ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[11]   ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[10]   ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[9]    ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[8]    ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[7]    ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[6]    ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[5]    ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[4]    ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[3]    ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[2]    ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[1]    ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[0]    ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; OneSecondPeriodPulse:inst2|count[14]   ; OneSecondPeriodPulse:inst2|out                         ; 0.101             ;
-; General42bitCounter:inst13|counter[37] ; HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[3] ; 0.013             ;
-+----------------------------------------+--------------------------------------------------------+-------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                  ;
++----------------------------------------+-------------------------------------------------------------------+-------------------+
+; Source Register                        ; Destination Register                                              ; Delay Added in ns ;
++----------------------------------------+-------------------------------------------------------------------+-------------------+
+; OneSecondPeriodPulse:inst2|count[23]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.209             ;
+; General42bitCounter:inst13|counter[36] ; HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[3] ; 0.207             ;
+; General42bitCounter:inst13|counter[40] ; HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[6] ; 0.200             ;
+; General42bitCounter:inst13|counter[25] ; HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[5] ; 0.186             ;
+; General42bitCounter:inst13|counter[41] ; HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[2] ; 0.174             ;
+; General42bitCounter:inst13|counter[34] ; HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[3] ; 0.166             ;
+; General42bitCounter:inst13|counter[38] ; HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[2] ; 0.155             ;
+; General42bitCounter:inst13|counter[27] ; HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[6] ; 0.155             ;
+; General42bitCounter:inst13|counter[23] ; HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[5] ; 0.155             ;
+; OneSecondPeriodPulse:inst2|count[16]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.117             ;
+; OneSecondPeriodPulse:inst2|count[15]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[13]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[12]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[11]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[10]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[9]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[8]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[7]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[6]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[5]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[4]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[3]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[2]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[1]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[0]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; OneSecondPeriodPulse:inst2|count[14]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.101             ;
+; General42bitCounter:inst13|counter[37] ; HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[3] ; 0.013             ;
++----------------------------------------+-------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 27 path(s) that have the largest delay added for hold.
 
 
@@ -1548,7 +1548,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.94 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.96 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1556,10 +1556,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:06
 Info (144001): Generated suppressed messages file C:/Users/oenri/Desktop/YouTube/copper/FPGA/output_files/copper.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 6677 megabytes
-    Info: Processing ended: Mon Sep 07 15:58:54 2020
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:01:22
+    Info: Peak virtual memory: 6679 megabytes
+    Info: Processing ended: Sun Sep 13 19:02:40 2020
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:01:23
 
 
 +----------------------------+

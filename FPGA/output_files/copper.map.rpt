@@ -1,5 +1,5 @@
 Analysis & Synthesis report for copper
-Mon Sep 07 15:58:15 2020
+Sun Sep 13 19:01:59 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Sep 07 15:58:15 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sun Sep 13 19:01:59 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; copper                                      ;
 ; Top-level Entity Name           ; copper                                      ;
@@ -180,6 +180,8 @@ https://fpgasoftware.intel.com/eula.
 ; library/General42bitCounter.v    ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/General42bitCounter.v  ;         ;
 ; library/HexDecoder_Core.v        ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_Core.v      ;         ;
 ; library/HexDecoder_RevB.v        ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevB.v      ;         ;
+; library/HexDecoder_RevC.v        ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevC.v      ;         ;
+; library/UnmapDisplays.v          ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/UnmapDisplays.v        ;         ;
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
 
 
@@ -210,23 +212,23 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Entity Name          ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+----------------------+--------------+
-; |copper                         ; 143 (0)             ; 137 (0)                   ; 0                 ; 0          ; 61   ; 0            ; |copper                                             ; copper               ; work         ;
-;    |General27bitCounter:inst3|  ; 27 (27)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|General27bitCounter:inst3                   ; General27bitCounter  ; work         ;
-;    |General42bitCounter:inst13| ; 42 (42)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|General42bitCounter:inst13                  ; General42bitCounter  ; work         ;
-;    |HexDecoder_RevB:inst7|      ; 42 (0)              ; 42 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7                       ; HexDecoder_RevB      ; work         ;
-;       |HexDecoder_Core:inst0|   ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst0 ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:inst1|   ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst1 ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:inst2|   ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst2 ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:inst3|   ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst3 ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:inst4|   ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst4 ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:inst5|   ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst5 ; HexDecoder_Core      ; work         ;
-;    |OneSecondPeriodPulse:inst2| ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|OneSecondPeriodPulse:inst2                  ; OneSecondPeriodPulse ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+----------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                      ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                            ; Entity Name          ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
+; |copper                                  ; 143 (0)             ; 137 (0)                   ; 0                 ; 0          ; 61   ; 0            ; |copper                                                        ; copper               ; work         ;
+;    |General27bitCounter:inst3|           ; 27 (27)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|General27bitCounter:inst3                              ; General27bitCounter  ; work         ;
+;    |General42bitCounter:inst13|          ; 42 (42)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|General42bitCounter:inst13                             ; General42bitCounter  ; work         ;
+;    |HexDecoder_RevC:inst8|               ; 42 (0)              ; 42 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8                                  ; HexDecoder_RevC      ; work         ;
+;       |HexDecoder_Core:makeCore[0].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[1].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[2].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[3].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[4].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[5].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst ; HexDecoder_Core      ; work         ;
+;    |OneSecondPeriodPulse:inst2|          ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|OneSecondPeriodPulse:inst2                             ; OneSecondPeriodPulse ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -292,7 +294,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 07 15:57:59 2020
+    Info: Processing started: Sun Sep 13 19:01:43 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off copper -c copper
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -312,6 +314,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file library
     Info (12023): Found entity 1: HexDecoder_Core File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_Core.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file library/hexdecoder_revb.v
     Info (12023): Found entity 1: HexDecoder_RevB File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevB.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file library/hexdecoder_revc.v
+    Info (12023): Found entity 1: HexDecoder_RevC File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevC.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file library/unmapdisplays.v
+    Info (12023): Found entity 1: UnmapDisplays File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/UnmapDisplays.v Line: 2
 Info (12127): Elaborating entity "copper" for the top level hierarchy
 Warning (275080): Converted elements in bus name "HEX0" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "HEX0[6..0]" to "HEX06..0"
@@ -340,10 +346,12 @@ Info (12128): Elaborating entity "OneSecondPeriodPulse" for hierarchy "OneSecond
 Warning (10230): Verilog HDL assignment warning at OneSecondPeriodPulse.v(30): truncated value with size 32 to match size of target (25) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/OneSecondPeriodPulse.v Line: 30
 Info (12128): Elaborating entity "General27bitCounter" for hierarchy "General27bitCounter:inst3"
 Warning (10230): Verilog HDL assignment warning at General27bitCounter.v(16): truncated value with size 32 to match size of target (27) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/General27bitCounter.v Line: 16
-Info (12128): Elaborating entity "HexDecoder_RevB" for hierarchy "HexDecoder_RevB:inst7"
-Info (12128): Elaborating entity "HexDecoder_Core" for hierarchy "HexDecoder_RevB:inst7|HexDecoder_Core:inst0" File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevB.v Line: 14
+Info (12128): Elaborating entity "UnmapDisplays" for hierarchy "UnmapDisplays:inst9"
+Info (12128): Elaborating entity "HexDecoder_RevC" for hierarchy "HexDecoder_RevC:inst8"
+Info (12128): Elaborating entity "HexDecoder_Core" for hierarchy "HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst" File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevC.v Line: 42
 Info (12128): Elaborating entity "General42bitCounter" for hierarchy "General42bitCounter:inst13"
 Info (12128): Elaborating entity "SevenSegmentDisplay_RevA" for hierarchy "SevenSegmentDisplay_RevA:inst1"
+Info (12128): Elaborating entity "HexDecoder_RevB" for hierarchy "HexDecoder_RevB:inst7"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR5" is stuck at GND
     Warning (13410): Pin "LEDR6" is stuck at GND
@@ -365,9 +373,9 @@ Info (21057): Implemented 204 device resources after synthesis - the final resou
     Info (21059): Implemented 52 output pins
     Info (21061): Implemented 143 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 4865 megabytes
-    Info: Processing ended: Mon Sep 07 15:58:15 2020
+    Info: Peak virtual memory: 4872 megabytes
+    Info: Processing ended: Sun Sep 13 19:01:59 2020
     Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Total CPU time (on all processors): 00:00:38
 
 
