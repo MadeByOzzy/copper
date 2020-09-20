@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Sep 13 19:01:59 2020
+Analysis & Synthesis Status : Successful - Sat Sep 19 23:39:47 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : copper
 Top-level Entity Name : copper
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 137
-Total pins : 61
+Total registers : 112
+Total pins : 63
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for copper
-Sun Sep 13 19:01:59 2020
+Sat Sep 19 23:39:47 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -44,14 +44,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Sep 13 19:01:59 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sat Sep 19 23:39:47 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; copper                                      ;
 ; Top-level Entity Name           ; copper                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 137                                         ;
-; Total pins                      ; 61                                          ;
+; Total registers                 ; 112                                         ;
+; Total pins                      ; 63                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -182,6 +182,8 @@ https://fpgasoftware.intel.com/eula.
 ; library/HexDecoder_RevB.v        ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevB.v      ;         ;
 ; library/HexDecoder_RevC.v        ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevC.v      ;         ;
 ; library/UnmapDisplays.v          ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/UnmapDisplays.v        ;         ;
+; library/RS232_testModule.v       ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_testModule.v     ;         ;
+; library/GeneralLatch.v           ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/GeneralLatch.v         ;         ;
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
 
 
@@ -190,25 +192,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 74             ;
+; Estimate of Logic utilization (ALMs needed) ; 61             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 143            ;
+; Combinational ALUT usage for logic          ; 118            ;
 ;     -- 7 input functions                    ; 0              ;
 ;     -- 6 input functions                    ; 4              ;
 ;     -- 5 input functions                    ; 1              ;
 ;     -- 4 input functions                    ; 44             ;
-;     -- <=3 input functions                  ; 94             ;
+;     -- <=3 input functions                  ; 69             ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 137            ;
+; Dedicated logic registers                   ; 112            ;
 ;                                             ;                ;
-; I/O pins                                    ; 61             ;
+; I/O pins                                    ; 63             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 137            ;
-; Total fan-out                               ; 909            ;
-; Average fan-out                             ; 2.26           ;
+; Maximum fan-out                             ; 112            ;
+; Total fan-out                               ; 787            ;
+; Average fan-out                             ; 2.21           ;
 +---------------------------------------------+----------------+
 
 
@@ -217,9 +219,10 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                            ; Entity Name          ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
-; |copper                                  ; 143 (0)             ; 137 (0)                   ; 0                 ; 0          ; 61   ; 0            ; |copper                                                        ; copper               ; work         ;
-;    |General27bitCounter:inst3|           ; 27 (27)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|General27bitCounter:inst3                              ; General27bitCounter  ; work         ;
+; |copper                                  ; 118 (0)             ; 112 (0)                   ; 0                 ; 0          ; 63   ; 0            ; |copper                                                        ; copper               ; work         ;
 ;    |General42bitCounter:inst13|          ; 42 (42)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|General42bitCounter:inst13                             ; General42bitCounter  ; work         ;
+;    |GeneralLatch:inst12|                 ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|GeneralLatch:inst12                                    ; GeneralLatch         ; work         ;
+;    |GeneralLatch:inst36|                 ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|GeneralLatch:inst36                                    ; GeneralLatch         ; work         ;
 ;    |HexDecoder_RevC:inst8|               ; 42 (0)              ; 42 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8                                  ; HexDecoder_RevC      ; work         ;
 ;       |HexDecoder_Core:makeCore[0].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst ; HexDecoder_Core      ; work         ;
 ;       |HexDecoder_Core:makeCore[1].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst ; HexDecoder_Core      ; work         ;
@@ -237,8 +240,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 137   ;
-; Number of registers using Synchronous Clear  ; 95    ;
+; Total registers                              ; 112   ;
+; Number of registers using Synchronous Clear  ; 70    ;
 ; Number of registers using Synchronous Load   ; 42    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -252,7 +255,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |copper|OneSecondPeriodPulse:inst2|count[17] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |copper|OneSecondPeriodPulse:inst2|count[12] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
@@ -261,21 +264,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 137                         ;
-;     SCLR              ; 95                          ;
+; arriav_ff             ; 112                         ;
+;     SCLR              ; 70                          ;
 ;     SLD               ; 42                          ;
-; arriav_lcell_comb     ; 144                         ;
-;     arith             ; 94                          ;
-;         1 data inputs ; 94                          ;
-;     normal            ; 50                          ;
+; arriav_lcell_comb     ; 119                         ;
+;     arith             ; 67                          ;
+;         1 data inputs ; 67                          ;
+;     normal            ; 52                          ;
 ;         0 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
 ;         4 data inputs ; 44                          ;
 ;         5 data inputs ; 1                           ;
 ;         6 data inputs ; 4                           ;
-; boundary_port         ; 61                          ;
+; boundary_port         ; 63                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 2.53                        ;
+; Average LUT depth     ; 2.44                        ;
 +-----------------------+-----------------------------+
 
 
@@ -294,7 +298,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Sep 13 19:01:43 2020
+    Info: Processing started: Sat Sep 19 23:39:30 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off copper -c copper
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -318,6 +322,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file library
     Info (12023): Found entity 1: HexDecoder_RevC File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevC.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file library/unmapdisplays.v
     Info (12023): Found entity 1: UnmapDisplays File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/UnmapDisplays.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file library/rs232_testmodule.v
+    Info (12023): Found entity 1: RS232_testModule File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_testModule.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file library/generallatch.v
+    Info (12023): Found entity 1: GeneralLatch File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/GeneralLatch.v Line: 2
 Info (12127): Elaborating entity "copper" for the top level hierarchy
 Warning (275080): Converted elements in bus name "HEX0" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "HEX0[6..0]" to "HEX06..0"
@@ -331,12 +339,12 @@ Warning (275080): Converted elements in bus name "HEX4" using legacy naming rule
     Warning (275081): Converted element name(s) from "HEX4[6..0]" to "HEX46..0"
 Warning (275080): Converted elements in bus name "HEX5" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "HEX5[6..0]" to "HEX56..0"
-Warning (275043): Pin "LEDR5" is missing source
-Warning (275043): Pin "LEDR6" is missing source
+Warning (275043): Pin "LEDR2" is missing source
+Warning (275043): Pin "LEDR3" is missing source
+Warning (275043): Pin "LEDR4" is missing source
 Warning (275043): Pin "LEDR7" is missing source
 Warning (275043): Pin "LEDR8" is missing source
 Warning (275043): Pin "LEDR9" is missing source
-Warning (275009): Pin "KEY1" not connected
 Warning (275009): Pin "KEY2" not connected
 Warning (275009): Pin "KEY3" not connected
 Warning (275009): Pin "CLOCK2_50" not connected
@@ -344,38 +352,40 @@ Warning (275009): Pin "CLOCK3_50" not connected
 Warning (275009): Pin "CLOCK4_50" not connected
 Info (12128): Elaborating entity "OneSecondPeriodPulse" for hierarchy "OneSecondPeriodPulse:inst2"
 Warning (10230): Verilog HDL assignment warning at OneSecondPeriodPulse.v(30): truncated value with size 32 to match size of target (25) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/OneSecondPeriodPulse.v Line: 30
-Info (12128): Elaborating entity "General27bitCounter" for hierarchy "General27bitCounter:inst3"
-Warning (10230): Verilog HDL assignment warning at General27bitCounter.v(16): truncated value with size 32 to match size of target (27) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/General27bitCounter.v Line: 16
+Info (12128): Elaborating entity "GeneralLatch" for hierarchy "GeneralLatch:inst12"
+Info (12128): Elaborating entity "RS232_testModule" for hierarchy "RS232_testModule:inst10"
 Info (12128): Elaborating entity "UnmapDisplays" for hierarchy "UnmapDisplays:inst9"
 Info (12128): Elaborating entity "HexDecoder_RevC" for hierarchy "HexDecoder_RevC:inst8"
 Info (12128): Elaborating entity "HexDecoder_Core" for hierarchy "HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst" File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevC.v Line: 42
 Info (12128): Elaborating entity "General42bitCounter" for hierarchy "General42bitCounter:inst13"
 Info (12128): Elaborating entity "SevenSegmentDisplay_RevA" for hierarchy "SevenSegmentDisplay_RevA:inst1"
+Info (12128): Elaborating entity "General27bitCounter" for hierarchy "General27bitCounter:inst3"
+Warning (10230): Verilog HDL assignment warning at General27bitCounter.v(16): truncated value with size 32 to match size of target (27) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/General27bitCounter.v Line: 16
 Info (12128): Elaborating entity "HexDecoder_RevB" for hierarchy "HexDecoder_RevB:inst7"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR5" is stuck at GND
-    Warning (13410): Pin "LEDR6" is stuck at GND
+    Warning (13410): Pin "LEDR2" is stuck at GND
+    Warning (13410): Pin "LEDR3" is stuck at GND
+    Warning (13410): Pin "LEDR4" is stuck at GND
     Warning (13410): Pin "LEDR7" is stuck at GND
     Warning (13410): Pin "LEDR8" is stuck at GND
     Warning (13410): Pin "LEDR9" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY1"
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY2"
     Warning (15610): No output dependent on input pin "KEY3"
     Warning (15610): No output dependent on input pin "CLOCK2_50"
     Warning (15610): No output dependent on input pin "CLOCK3_50"
     Warning (15610): No output dependent on input pin "CLOCK4_50"
-Info (21057): Implemented 204 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 143 logic cells
+Info (21057): Implemented 181 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 53 output pins
+    Info (21061): Implemented 118 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 4872 megabytes
-    Info: Processing ended: Sun Sep 13 19:01:59 2020
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Peak virtual memory: 4869 megabytes
+    Info: Processing ended: Sat Sep 19 23:39:47 2020
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:36
 
 

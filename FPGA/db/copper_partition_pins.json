@@ -12,15 +12,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDR2",
+					"name" : "LEDR5",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR3",
-					"strict" : false
-				},
-				{
-					"name" : "LEDR4",
+					"name" : "LEDR6",
 					"strict" : false
 				},
 				{
@@ -192,7 +188,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "RS232_TX",
+					"strict" : false
+				},
+				{
 					"name" : "KEY0",
+					"strict" : false
+				},
+				{
+					"name" : "KEY1",
 					"strict" : false
 				},
 				{
@@ -201,6 +205,10 @@
 				},
 				{
 					"name" : "RESET_N",
+					"strict" : false
+				},
+				{
+					"name" : "RS232_RX",
 					"strict" : false
 				}
 			]

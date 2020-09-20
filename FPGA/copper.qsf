@@ -108,6 +108,8 @@ set_location_assignment PIN_P14 -to HEX53
 set_location_assignment PIN_C1 -to HEX54
 set_location_assignment PIN_C2 -to HEX55
 set_location_assignment PIN_W19 -to HEX56
+set_location_assignment PIN_K19 -to RS232_TX
+set_location_assignment PIN_P18 -to RS232_RX
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -123,4 +125,6 @@ set_global_assignment -name VERILOG_FILE library/HexDecoder_Core.v
 set_global_assignment -name VERILOG_FILE library/HexDecoder_RevB.v
 set_global_assignment -name VERILOG_FILE library/HexDecoder_RevC.v
 set_global_assignment -name VERILOG_FILE library/UnmapDisplays.v
+set_global_assignment -name VERILOG_FILE library/RS232_testModule.v
+set_global_assignment -name VERILOG_FILE library/GeneralLatch.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
