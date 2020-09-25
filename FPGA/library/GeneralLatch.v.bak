@@ -1,5 +1,0 @@
-
-module GeneralLatch(clk, rst, signalIn, latchedOut);
-
-
-endmodule
