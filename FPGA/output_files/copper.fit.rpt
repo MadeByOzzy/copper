@@ -1,5 +1,5 @@
 Fitter report for copper
-Sat Sep 19 23:40:27 2020
+Fri Sep 25 18:21:08 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -63,15 +63,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sat Sep 19 23:40:27 2020       ;
+; Fitter Status                   ; Successful - Fri Sep 25 18:21:08 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; copper                                      ;
 ; Top-level Entity Name           ; copper                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 62 / 18,480 ( < 1 % )                       ;
-; Total registers                 ; 112                                         ;
+; Logic utilization (in ALMs)     ; 79 / 18,480 ( < 1 % )                       ;
+; Total registers                 ; 128                                         ;
 ; Total pins                      ; 63 / 224 ( 28 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -153,18 +153,18 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.6%      ;
-;     Processor 3            ;   0.5%      ;
-;     Processor 4            ;   0.5%      ;
-;     Processor 5            ;   0.5%      ;
-;     Processor 6            ;   0.5%      ;
-;     Processor 7            ;   0.5%      ;
-;     Processor 8            ;   0.5%      ;
+;     Processor 2            ;   1.0%      ;
+;     Processor 3            ;   1.0%      ;
+;     Processor 4            ;   1.0%      ;
+;     Processor 5            ;   1.0%      ;
+;     Processor 6            ;   1.0%      ;
+;     Processor 7            ;   0.9%      ;
+;     Processor 8            ;   0.9%      ;
 +----------------------------+-------------+
 
 
@@ -183,8 +183,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 358 ) ; 0.00 % ( 0 / 358 )         ; 0.00 % ( 0 / 358 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 358 ) ; 0.00 % ( 0 / 358 )         ; 0.00 % ( 0 / 358 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 401 ) ; 0.00 % ( 0 / 401 )         ; 0.00 % ( 0 / 401 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 401 ) ; 0.00 % ( 0 / 401 )         ; 0.00 % ( 0 / 401 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -207,7 +207,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 358 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 401 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -223,14 +223,14 @@ The pin-out file can be found in C:/Users/oenri/Desktop/YouTube/copper/FPGA/outp
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 62 / 18,480        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 62                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 68 / 18,480        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 51                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 11                 ;       ;
-;         [c] ALMs used for registers                         ; 6                  ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 79 / 18,480        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 79                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 79 / 18,480        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 64                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 15                 ;       ;
+;         [c] ALMs used for registers                         ; 0                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 18,480         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 18,480         ; 0 %   ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18,480         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -239,24 +239,24 @@ The pin-out file can be found in C:/Users/oenri/Desktop/YouTube/copper/FPGA/outp
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 12 / 1,848         ; < 1 % ;
-;     -- Logic LABs                                           ; 12                 ;       ;
+; Total LABs:  partially or completely used                   ; 14 / 1,848         ; < 1 % ;
+;     -- Logic LABs                                           ; 14                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 119                ;       ;
+; Combinational ALUT usage for logic                          ; 146                ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 4                  ;       ;
-;     -- 5 input functions                                    ; 1                  ;       ;
-;     -- 4 input functions                                    ; 44                 ;       ;
-;     -- <=3 input functions                                  ; 70                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 5                  ;       ;
+;     -- 6 input functions                                    ; 10                 ;       ;
+;     -- 5 input functions                                    ; 14                 ;       ;
+;     -- 4 input functions                                    ; 45                 ;       ;
+;     -- <=3 input functions                                  ; 77                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 112                ;       ;
+; Dedicated logic registers                                   ; 128                ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 112 / 36,960       ; < 1 % ;
+;         -- Primary logic registers                          ; 128 / 36,960       ; < 1 % ;
 ;         -- Secondary logic registers                        ; 0 / 36,960         ; 0 %   ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 112                ;       ;
+;         -- Design implementation registers                  ; 128                ;       ;
 ;         -- Routing optimization registers                   ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
@@ -284,11 +284,11 @@ The pin-out file can be found in C:/Users/oenri/Desktop/YouTube/copper/FPGA/outp
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.6% / 0.6% / 0.4% ;       ;
-; Maximum fan-out                                             ; 112                ;       ;
-; Highest non-global fan-out                                  ; 88                 ;       ;
-; Total fan-out                                               ; 793                ;       ;
-; Average fan-out                                             ; 2.18               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.7% / 0.8% / 0.8% ;       ;
+; Maximum fan-out                                             ; 128                ;       ;
+; Highest non-global fan-out                                  ; 96                 ;       ;
+; Total fan-out                                               ; 955                ;       ;
+; Average fan-out                                             ; 2.38               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -297,14 +297,14 @@ The pin-out file can be found in C:/Users/oenri/Desktop/YouTube/copper/FPGA/outp
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 62 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 62                    ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 68 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 51                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 11                    ; 0                              ;
-;         [c] ALMs used for registers                         ; 6                     ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 79 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 79                    ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 79 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 64                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 15                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 0                     ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 18480 ( < 1 % )   ; 0 / 18480 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 18480 ( 0 % )     ; 0 / 18480 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18480 ( 0 % )     ; 0 / 18480 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -313,27 +313,27 @@ The pin-out file can be found in C:/Users/oenri/Desktop/YouTube/copper/FPGA/outp
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 12 / 1848 ( < 1 % )   ; 0 / 1848 ( 0 % )               ;
-;     -- Logic LABs                                           ; 12                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 14 / 1848 ( < 1 % )   ; 0 / 1848 ( 0 % )               ;
+;     -- Logic LABs                                           ; 14                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 119                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 146                   ; 0                              ;
 ;     -- 7 input functions                                    ; 0                     ; 0                              ;
-;     -- 6 input functions                                    ; 4                     ; 0                              ;
-;     -- 5 input functions                                    ; 1                     ; 0                              ;
-;     -- 4 input functions                                    ; 44                    ; 0                              ;
-;     -- <=3 input functions                                  ; 70                    ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 5                     ; 0                              ;
+;     -- 6 input functions                                    ; 10                    ; 0                              ;
+;     -- 5 input functions                                    ; 14                    ; 0                              ;
+;     -- 4 input functions                                    ; 45                    ; 0                              ;
+;     -- <=3 input functions                                  ; 77                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 0                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 112 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
+;         -- Primary logic registers                          ; 128 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
 ;         -- Secondary logic registers                        ; 0 / 36960 ( 0 % )     ; 0 / 36960 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 112                   ; 0                              ;
+;         -- Design implementation registers                  ; 128                   ; 0                              ;
 ;         -- Routing optimization registers                   ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
@@ -351,8 +351,8 @@ The pin-out file can be found in C:/Users/oenri/Desktop/YouTube/copper/FPGA/outp
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 793                   ; 0                              ;
-;     -- Registered Connections                               ; 311                   ; 0                              ;
+;     -- Total Connections                                    ; 955                   ; 0                              ;
+;     -- Registered Connections                               ; 383                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -387,13 +387,13 @@ The pin-out file can be found in C:/Users/oenri/Desktop/YouTube/copper/FPGA/outp
 ; CLOCK2_50 ; H13   ; 7A       ; 38           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; CLOCK3_50 ; E10   ; 8A       ; 14           ; 45           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; CLOCK4_50 ; V15   ; 4A       ; 38           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; CLOCK_50  ; M9    ; 3B       ; 22           ; 0            ; 0            ; 112                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; CLOCK_50  ; M9    ; 3B       ; 22           ; 0            ; 0            ; 128                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY0      ; U7    ; 3A       ; 10           ; 0            ; 91           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY1      ; W9    ; 3A       ; 11           ; 0            ; 34           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY2      ; M7    ; 3A       ; 14           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY3      ; M6    ; 3A       ; 14           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; RESET_N   ; P22   ; 5A       ; 54           ; 16           ; 54           ; 88                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; RS232_RX  ; P18   ; 5A       ; 54           ; 17           ; 54           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; RESET_N   ; P22   ; 5A       ; 54           ; 16           ; 54           ; 96                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; RS232_RX  ; P18   ; 5A       ; 54           ; 17           ; 54           ; 11                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -1038,24 +1038,25 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------+-------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                    ;
-+------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node               ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                            ; Entity Name          ; Library Name ;
-+------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
-; |copper                                  ; 62.0 (0.5)           ; 67.0 (0.5)                       ; 5.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 119 (1)             ; 112 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 63   ; 0            ; |copper                                                        ; copper               ; work         ;
-;    |General42bitCounter:inst13|          ; 21.0 (21.0)          ; 26.0 (26.0)                      ; 5.0 (5.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 42 (42)             ; 42 (42)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|General42bitCounter:inst13                             ; General42bitCounter  ; work         ;
-;    |GeneralLatch:inst12|                 ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|GeneralLatch:inst12                                    ; GeneralLatch         ; work         ;
-;    |GeneralLatch:inst36|                 ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|GeneralLatch:inst36                                    ; GeneralLatch         ; work         ;
-;    |HexDecoder_RevC:inst8|               ; 21.0 (0.0)           ; 21.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 42 (0)              ; 42 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8                                  ; HexDecoder_RevC      ; work         ;
-;       |HexDecoder_Core:makeCore[0].inst| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:makeCore[1].inst| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:makeCore[2].inst| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:makeCore[3].inst| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:makeCore[4].inst| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst ; HexDecoder_Core      ; work         ;
-;       |HexDecoder_Core:makeCore[5].inst| ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst ; HexDecoder_Core      ; work         ;
-;    |OneSecondPeriodPulse:inst2|          ; 18.5 (18.5)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|OneSecondPeriodPulse:inst2                             ; OneSecondPeriodPulse ; work         ;
-+------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                ;
++---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node      ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Entity Name          ; Library Name ;
++---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------+----------------------+--------------+
+; |copper                         ; 78.5 (0.5)           ; 79.0 (0.5)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 146 (1)             ; 128 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 63   ; 0            ; |copper                                             ; copper               ; work         ;
+;    |General42bitCounter:inst13| ; 17.0 (17.0)          ; 17.0 (17.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (34)             ; 34 (34)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|General42bitCounter:inst13                  ; General42bitCounter  ; work         ;
+;    |GeneralLatch:inst12|        ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|GeneralLatch:inst12                         ; GeneralLatch         ; work         ;
+;    |GeneralLatch:inst36|        ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|GeneralLatch:inst36                         ; GeneralLatch         ; work         ;
+;    |HexDecoder_RevB:inst7|      ; 21.0 (0.0)           ; 21.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 42 (0)              ; 42 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7                       ; HexDecoder_RevB      ; work         ;
+;       |HexDecoder_Core:inst0|   ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst0 ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:inst1|   ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst1 ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:inst2|   ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst2 ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:inst3|   ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst3 ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:inst4|   ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst4 ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:inst5|   ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevB:inst7|HexDecoder_Core:inst5 ; HexDecoder_Core      ; work         ;
+;    |OneSecondPeriodPulse:inst2| ; 18.5 (18.5)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|OneSecondPeriodPulse:inst2                  ; OneSecondPeriodPulse ; work         ;
+;    |RS232_rx:inst5|             ; 20.5 (20.5)          ; 21.0 (21.0)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 35 (35)             ; 24 (24)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |copper|RS232_rx:inst5                              ; RS232_rx             ; work         ;
++---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1130,125 +1131,144 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                         ;
-+--------------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                      ; Pad To Core Index ; Setting ;
-+--------------------------------------------------------------------------+-------------------+---------+
-; KEY2                                                                     ;                   ;         ;
-; KEY3                                                                     ;                   ;         ;
-; CLOCK2_50                                                                ;                   ;         ;
-; CLOCK3_50                                                                ;                   ;         ;
-; CLOCK4_50                                                                ;                   ;         ;
-; KEY0                                                                     ;                   ;         ;
-;      - LEDR0~output                                                      ; 1                 ; 0       ;
-; KEY1                                                                     ;                   ;         ;
-;      - GeneralLatch:inst36|latchedOut~0                                  ; 1                 ; 0       ;
-;      - RS232_TX~output                                                   ; 1                 ; 0       ;
-; CLOCK_50                                                                 ;                   ;         ;
-; RESET_N                                                                  ;                   ;         ;
-;      - General42bitCounter:inst13|counter[21]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[32]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[31]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[18]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[20]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[19]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[29]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[28]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[27]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[26]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[25]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[24]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[23]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[22]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[14]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[30]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[33]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[34]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[35]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[36]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[37]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[38]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[39]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[40]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[41]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[17]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[16]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[15]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[13]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[12]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[11]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[10]                            ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[9]                             ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[8]                             ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[7]                             ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[6]                             ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[5]                             ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[4]                             ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[3]                             ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[2]                             ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[1]                             ; 1                 ; 0       ;
-;      - General42bitCounter:inst13|counter[0]                             ; 1                 ; 0       ;
-;      - OneSecondPeriodPulse:inst2|out                                    ; 1                 ; 0       ;
-;      - GeneralLatch:inst12|latchedOut                                    ; 1                 ; 0       ;
-;      - GeneralLatch:inst36|latchedOut                                    ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[0] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[1] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[2] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[3] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[4] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[5] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst|dispOut[6] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[0] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[1] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[2] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[3] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[4] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[5] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[6] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[0] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[1] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[3] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[4] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[2] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[5] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[6] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[0] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[1] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[2] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[3] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[4] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[5] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst|dispOut[6] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[0] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[1] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[2] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[3] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[4] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[5] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst|dispOut[6] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[0] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[1] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[2] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[3] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[4] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[5] ; 1                 ; 0       ;
-;      - HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst|dispOut[6] ; 1                 ; 0       ;
-;      - OneSecondPeriodPulse:inst2|count[12]~0                            ; 1                 ; 0       ;
-; RS232_RX                                                                 ;                   ;         ;
-;      - GeneralLatch:inst12|latchedOut~0                                  ; 1                 ; 0       ;
-+--------------------------------------------------------------------------+-------------------+---------+
++---------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                              ;
++---------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                           ; Pad To Core Index ; Setting ;
++---------------------------------------------------------------+-------------------+---------+
+; KEY2                                                          ;                   ;         ;
+; KEY3                                                          ;                   ;         ;
+; CLOCK2_50                                                     ;                   ;         ;
+; CLOCK3_50                                                     ;                   ;         ;
+; CLOCK4_50                                                     ;                   ;         ;
+; KEY0                                                          ;                   ;         ;
+;      - LEDR0~output                                           ; 1                 ; 0       ;
+; KEY1                                                          ;                   ;         ;
+;      - GeneralLatch:inst36|latchedOut~0                       ; 1                 ; 0       ;
+;      - RS232_TX~output                                        ; 1                 ; 0       ;
+; CLOCK_50                                                      ;                   ;         ;
+; RESET_N                                                       ;                   ;         ;
+;      - General42bitCounter:inst13|counter[19]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[16]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[18]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[33]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[32]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[31]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[30]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[29]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[28]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[17]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[27]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[26]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[25]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[24]                 ; 1                 ; 0       ;
+;      - RS232_rx:inst5|activeBit[0]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[23]                 ; 1                 ; 0       ;
+;      - RS232_rx:inst5|activeBit[1]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[22]                 ; 1                 ; 0       ;
+;      - RS232_rx:inst5|activeBit[2]                            ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[21]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[20]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[15]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[14]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[13]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[12]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[11]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[10]                 ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[9]                  ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[8]                  ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[7]                  ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[6]                  ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[5]                  ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[4]                  ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[3]                  ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[2]                  ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[1]                  ; 1                 ; 0       ;
+;      - General42bitCounter:inst13|counter[0]                  ; 1                 ; 0       ;
+;      - OneSecondPeriodPulse:inst2|out                         ; 1                 ; 0       ;
+;      - GeneralLatch:inst12|latchedOut                         ; 1                 ; 0       ;
+;      - GeneralLatch:inst36|latchedOut                         ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[0] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[1] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[2] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[3] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[4] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[5] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst5|dispOut[6] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[0] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[1] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[2] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[3] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[4] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[5] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[6] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[0] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[1] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[3] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[4] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[2] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[5] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[6] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[0] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[1] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[2] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[3] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[4] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[5] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst2|dispOut[6] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[0] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[1] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[2] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[3] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[4] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[5] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst1|dispOut[6] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[0] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[1] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[2] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[3] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[4] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[5] ; 1                 ; 0       ;
+;      - HexDecoder_RevB:inst7|HexDecoder_Core:inst0|dispOut[6] ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut[0]                              ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut[1]                              ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut[2]                              ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut[3]                              ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut[4]                              ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut[5]                              ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut[6]                              ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut[7]                              ; 1                 ; 0       ;
+;      - RS232_rx:inst5|STATE.s_read                            ; 1                 ; 0       ;
+;      - RS232_rx:inst5|STATE.s_start                           ; 1                 ; 0       ;
+;      - RS232_rx:inst5|STATE.s_stop                            ; 1                 ; 0       ;
+;      - OneSecondPeriodPulse:inst2|count[2]~0                  ; 1                 ; 0       ;
+;      - RS232_rx:inst5|counter[7]~0                            ; 1                 ; 0       ;
+;      - RS232_rx:inst5|STATE~8                                 ; 1                 ; 0       ;
+; RS232_RX                                                      ;                   ;         ;
+;      - GeneralLatch:inst12|latchedOut~0                       ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut~0                               ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut~1                               ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut~2                               ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut~3                               ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut~4                               ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut~5                               ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut~6                               ; 1                 ; 0       ;
+;      - RS232_rx:inst5|dataOut~7                               ; 1                 ; 0       ;
+;      - RS232_rx:inst5|Selector13~0                            ; 1                 ; 0       ;
+;      - RS232_rx:inst5|STATE~8                                 ; 1                 ; 0       ;
++---------------------------------------------------------------+-------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                 ;
-+----------------------------------------+---------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                   ; Location            ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------+---------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                               ; PIN_M9              ; 112     ; Clock                   ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; OneSecondPeriodPulse:inst2|count[12]~0 ; LABCELL_X52_Y14_N51 ; 25      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
-; RESET_N                                ; PIN_P22             ; 88      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-+----------------------------------------+---------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                ;
++---------------------------------------+---------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                  ; Location            ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------------+---------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50                              ; PIN_M9              ; 128     ; Clock                   ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; OneSecondPeriodPulse:inst2|count[2]~0 ; LABCELL_X36_Y11_N54 ; 25      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; RESET_N                               ; PIN_P22             ; 96      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; RS232_rx:inst5|counter[7]~0           ; LABCELL_X41_Y6_N42  ; 9       ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
++---------------------------------------+---------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -1256,7 +1276,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
-; CLOCK_50 ; PIN_M9   ; 112     ; Global Clock         ; GCLK6            ; --                        ;
+; CLOCK_50 ; PIN_M9   ; 128     ; Global Clock         ; GCLK6            ; --                        ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1265,21 +1285,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 122 / 140,056 ( < 1 % ) ;
+; Block interconnects          ; 146 / 140,056 ( < 1 % ) ;
 ; C12 interconnects            ; 5 / 6,048 ( < 1 % )     ;
-; C2 interconnects             ; 40 / 54,648 ( < 1 % )   ;
-; C4 interconnects             ; 36 / 25,920 ( < 1 % )   ;
+; C2 interconnects             ; 46 / 54,648 ( < 1 % )   ;
+; C4 interconnects             ; 48 / 25,920 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )          ;
-; Direct links                 ; 12 / 140,056 ( < 1 % )  ;
+; Direct links                 ; 20 / 140,056 ( < 1 % )  ;
 ; Global clocks                ; 1 / 16 ( 6 % )          ;
-; Local interconnects          ; 72 / 36,960 ( < 1 % )   ;
+; Local interconnects          ; 79 / 36,960 ( < 1 % )   ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
-; R14 interconnects            ; 18 / 5,984 ( < 1 % )    ;
-; R14/C12 interconnect drivers ; 20 / 9,504 ( < 1 % )    ;
-; R3 interconnects             ; 73 / 60,192 ( < 1 % )   ;
-; R6 interconnects             ; 73 / 127,072 ( < 1 % )  ;
+; R14 interconnects            ; 26 / 5,984 ( < 1 % )    ;
+; R14/C12 interconnect drivers ; 29 / 9,504 ( < 1 % )    ;
+; R3 interconnects             ; 82 / 60,192 ( < 1 % )   ;
+; R6 interconnects             ; 77 / 127,072 ( < 1 % )  ;
 ; Spine clocks                 ; 1 / 120 ( < 1 % )       ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )       ;
 +------------------------------+-------------------------+
@@ -1458,39 +1478,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; CLOCK_50        ; CLOCK_50             ; 2.6               ;
+; CLOCK_50        ; CLOCK_50             ; 11.6              ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                  ;
-+----------------------------------------+-------------------------------------------------------------------+-------------------+
-; Source Register                        ; Destination Register                                              ; Delay Added in ns ;
-+----------------------------------------+-------------------------------------------------------------------+-------------------+
-; General42bitCounter:inst13|counter[25] ; HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[5] ; 0.161             ;
-; OneSecondPeriodPulse:inst2|count[16]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[15]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[13]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[12]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[11]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[10]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[9]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[8]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[7]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[6]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[5]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[4]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[3]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[2]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[1]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[0]    ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; OneSecondPeriodPulse:inst2|count[14]   ; OneSecondPeriodPulse:inst2|out                                    ; 0.143             ;
-; General42bitCounter:inst13|counter[27] ; HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst|dispOut[6] ; 0.130             ;
-; General42bitCounter:inst13|counter[23] ; HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst|dispOut[5] ; 0.130             ;
-+----------------------------------------+-------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 20 path(s) that have the largest delay added for hold.
++---------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                       ;
++----------------------------------------+--------------------------------------------------------+-------------------+
+; Source Register                        ; Destination Register                                   ; Delay Added in ns ;
++----------------------------------------+--------------------------------------------------------+-------------------+
+; RS232_rx:inst5|STATE.s_read            ; RS232_rx:inst5|dataOut[5]                              ; 0.350             ;
+; RS232_rx:inst5|counter[7]              ; RS232_rx:inst5|dataOut[5]                              ; 0.350             ;
+; RS232_rx:inst5|counter[5]              ; RS232_rx:inst5|dataOut[5]                              ; 0.350             ;
+; RS232_rx:inst5|counter[4]              ; RS232_rx:inst5|dataOut[5]                              ; 0.350             ;
+; RS232_rx:inst5|counter[3]              ; RS232_rx:inst5|dataOut[5]                              ; 0.350             ;
+; RS232_rx:inst5|counter[2]              ; RS232_rx:inst5|dataOut[5]                              ; 0.350             ;
+; RS232_rx:inst5|counter[1]              ; RS232_rx:inst5|dataOut[5]                              ; 0.350             ;
+; RS232_rx:inst5|counter[0]              ; RS232_rx:inst5|dataOut[5]                              ; 0.350             ;
+; RS232_rx:inst5|counter[6]              ; RS232_rx:inst5|dataOut[5]                              ; 0.350             ;
+; RS232_rx:inst5|counter[8]              ; RS232_rx:inst5|dataOut[5]                              ; 0.350             ;
+; RS232_rx:inst5|activeBit[0]            ; RS232_rx:inst5|dataOut[5]                              ; 0.332             ;
+; RS232_rx:inst5|activeBit[2]            ; RS232_rx:inst5|STATE.s_read                            ; 0.302             ;
+; RS232_rx:inst5|activeBit[1]            ; RS232_rx:inst5|dataOut[4]                              ; 0.283             ;
+; General42bitCounter:inst13|counter[28] ; HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[6] ; 0.193             ;
+; General42bitCounter:inst13|counter[24] ; HexDecoder_RevB:inst7|HexDecoder_Core:inst4|dispOut[6] ; 0.184             ;
+; General42bitCounter:inst13|counter[26] ; HexDecoder_RevB:inst7|HexDecoder_Core:inst3|dispOut[1] ; 0.179             ;
+; OneSecondPeriodPulse:inst2|count[16]   ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[15]   ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[13]   ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[12]   ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[11]   ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[10]   ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[9]    ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[8]    ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[7]    ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[6]    ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[5]    ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[4]    ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[3]    ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[2]    ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[1]    ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[0]    ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; OneSecondPeriodPulse:inst2|count[14]   ; OneSecondPeriodPulse:inst2|out                         ; 0.137             ;
+; RS232_rx:inst5|STATE.s_idle            ; RS232_rx:inst5|STATE.s_start                           ; 0.070             ;
++----------------------------------------+--------------------------------------------------------+-------------------+
+Note: This table only shows the top 34 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1506,7 +1540,7 @@ Warning (292013): Feature LogicLock is only available with a valid subscription 
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): CLOCK_50~inputCLKENA0 with 112 fanout uses global clock CLKCTRL_G6
+    Info (11162): CLOCK_50~inputCLKENA0 with 128 fanout uses global clock CLKCTRL_G6
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'copper.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1519,7 +1553,7 @@ Info (176235): Finished register packing
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:09
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
@@ -1529,7 +1563,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.88 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.98 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1537,10 +1571,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:06
 Info (144001): Generated suppressed messages file C:/Users/oenri/Desktop/YouTube/copper/FPGA/output_files/copper.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 6680 megabytes
-    Info: Processing ended: Sat Sep 19 23:40:28 2020
-    Info: Elapsed time: 00:00:40
-    Info: Total CPU time (on all processors): 00:01:23
+    Info: Peak virtual memory: 6684 megabytes
+    Info: Processing ended: Fri Sep 25 18:21:09 2020
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:01:18
 
 
 +----------------------------+

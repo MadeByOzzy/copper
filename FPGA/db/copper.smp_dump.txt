@@ -1,0 +1,7 @@
+
+State Machine - |copper|RS232_rx:inst5|STATE
+Name STATE.s_stop STATE.s_read STATE.s_start STATE.s_idle 
+STATE.s_idle 0 0 0 0 
+STATE.s_start 0 0 1 1 
+STATE.s_read 0 1 0 1 
+STATE.s_stop 1 0 0 1 
