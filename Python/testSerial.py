@@ -1,6 +1,17 @@
 import serial
 
-ser = serial.Serial('COM3', 115200)  # open serial port
-print(ser.name)         # check which port was really used
-ser.write(b'k')     # write a string
-ser.close()             # close port
+# open serial port
+ser = serial.Serial('COM3', 115200)
+
+# flush all read contents
+ser.flush()
+
+# write a string
+ser.write(b'K')
+
+# read back mirrored response
+response = ser.read()
+print(response)
+
+# close port
+ser.close()

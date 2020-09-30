@@ -64,7 +64,7 @@ begin
 			
 			else
 			begin
-				counter <= counter +1;
+				counter <= counter + 1;
 				STATE <= s_start;
 			end
 		end
@@ -77,7 +77,6 @@ begin
 			begin
 				counter <= 0;
 				activeBit <= activeBit + 1;
-				tx <= latchedData[activeBit];
 				
 				if (activeBit == 7)
 				begin
@@ -92,6 +91,7 @@ begin
 			
 			else
 			begin
+				tx <= latchedData[activeBit];
 				counter <= counter + 1;
 				STATE <= s_write;
 			end
