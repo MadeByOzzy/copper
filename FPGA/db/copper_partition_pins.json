@@ -16,10 +16,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDR6",
-					"strict" : false
-				},
-				{
 					"name" : "HEX00",
 					"strict" : false
 				},
@@ -193,10 +189,6 @@
 				},
 				{
 					"name" : "KEY0",
-					"strict" : false
-				},
-				{
-					"name" : "KEY1",
 					"strict" : false
 				},
 				{

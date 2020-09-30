@@ -1,5 +1,5 @@
 Assembler report for copper
-Fri Sep 25 18:21:20 2020
+Tue Sep 29 18:59:42 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Sep 25 18:21:20 2020 ;
+; Assembler Status      ; Successful - Tue Sep 29 18:59:42 2020 ;
 ; Revision Name         ; copper                                ;
 ; Top-level Entity Name ; copper                                ;
 ; Family                ; Cyclone V                             ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-----------------------------------------------------------------------------+
 ; Option         ; Setting                                                                     ;
 +----------------+-----------------------------------------------------------------------------+
-; JTAG usercode  ; 0x004FF660                                                                  ;
-; Checksum       ; 0x004FF660                                                                  ;
+; JTAG usercode  ; 0x00508396                                                                  ;
+; Checksum       ; 0x00508396                                                                  ;
 +----------------+-----------------------------------------------------------------------------+
 
 
@@ -78,13 +78,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Sep 25 18:21:14 2020
+    Info: Processing started: Tue Sep 29 18:59:36 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off copper -c copper
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Fri Sep 25 18:21:20 2020
+    Info: Peak virtual memory: 4831 megabytes
+    Info: Processing ended: Tue Sep 29 18:59:42 2020
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 
