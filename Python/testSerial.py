@@ -7,7 +7,7 @@ ser = serial.Serial('COM3', 115200)
 ser.flush()
 
 # write a string
-ser.write(b'K')
+ser.write(b'k')
 
 # read back mirrored response
 response = ser.read()
