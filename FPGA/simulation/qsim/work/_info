@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/oenri/Desktop/YouTube/copper/FPGA/simulation/qsim
+vOneShot
+Z1 !s110 1602477221
+!i10b 1
+!s100 HC937;<_JX860YlhCAi5e2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I^F@W8<B[WTmHPC79J`HnD2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1602477218
+8copper.vo
+Fcopper.vo
+!i122 17
+L0 32 142
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1602477220.000000
+!s107 copper.vo|
+!s90 -work|work|copper.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@one@shot
+vOneShot_vlg_vec_tst
+R1
+!i10b 1
+!s100 <bY?z5EneX;H^Z>fo5;cz3
+R2
+IaiAen2XTb:Z]QRW7iXF7D3
+R3
+R0
+w1602477002
+8simulation/Waveform.vwf.vt
+Fsimulation/Waveform.vwf.vt
+!i122 18
+L0 30 56
+R4
+r1
+!s85 0
+31
+!s108 1602477221.000000
+!s107 simulation/Waveform.vwf.vt|
+!s90 -work|work|simulation/Waveform.vwf.vt|
+!i113 1
+R5
+R6
+n@one@shot_vlg_vec_tst

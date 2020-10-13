@@ -1,0 +1,147 @@
+Determining the location of the ModelSim executable...
+
+Using: c:/intelfpga_lite/20.1/modelsim_ase/win32aloem/
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off copper -c copper --vector_source="C:/Users/oenri/Desktop/YouTube/copper/FPGA/simulation/Waveform.vwf" --testbench_file="C:/Users/oenri/Desktop/YouTube/copper/FPGA/simulation/qsim/Waveform.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Sun Oct 11 21:33:35 2020
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off copper -c copper --vector_source=C:/Users/oenri/Desktop/YouTube/copper/FPGA/simulation/Waveform.vwf --testbench_file=C:/Users/oenri/Desktop/YouTube/copper/FPGA/simulation/qsim/Waveform.vwf.vt
+Warning (125092): Tcl Script File demoRAM.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE demoRAM.qip
+Info (119006): Selected device 5CEBA4F23C7 for design "copper"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/oenri/Desktop/YouTube/copper/FPGA/simulation/qsim/" copper -c copper
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Sun Oct 11 21:33:37 2020
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/oenri/Desktop/YouTube/copper/FPGA/simulation/qsim/ copper -c copper
+Warning (125092): Tcl Script File demoRAM.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE demoRAM.qip
+Info (119006): Selected device 5CEBA4F23C7 for design "copper"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file copper.vo in folder "C:/Users/oenri/Desktop/YouTube/copper/FPGA/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4724 megabytes
+    Info: Processing ended: Sun Oct 11 21:33:38 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+C:/Users/oenri/Desktop/YouTube/copper/FPGA/simulation/qsim/copper.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+c:/intelfpga_lite/20.1/modelsim_ase/win32aloem//vsim -c -do copper.do
+
+Reading pref.tcl
+
+
+# 2020.1
+
+# do copper.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:33:40 on Oct 11,2020
+# vlog -work work copper.vo 
+# -- Compiling module OneShot
+# 
+# Top level modules:
+# 	OneShot
+# End time: 21:33:41 on Oct 11,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:33:41 on Oct 11,2020
+# vlog -work work simulation/Waveform.vwf.vt 
+# -- Compiling module OneShot_vlg_vec_tst
+# 
+# Top level modules:
+# 	OneShot_vlg_vec_tst
+# End time: 21:33:41 on Oct 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.OneShot_vlg_vec_tst 
+# Start time: 21:33:41 on Oct 11,2020
+# Loading work.OneShot_vlg_vec_tst
+# Loading work.OneShot
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+# after#25
+
+# ** Note: $finish    : simulation/Waveform.vwf.vt(49)
+#    Time: 1 us  Iteration: 0  Instance: /OneShot_vlg_vec_tst
+# End time: 21:33:42 on Oct 11,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading C:/Users/oenri/Desktop/YouTube/copper/FPGA/simulation/Waveform.vwf...
+
+Reading C:/Users/oenri/Desktop/YouTube/copper/FPGA/simulation/qsim/copper.msim.vcd...
+
+Processing channel transitions... 
+
+Writing the resulting VWF to C:/Users/oenri/Desktop/YouTube/copper/FPGA/simulation/qsim/copper_20201011213342.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

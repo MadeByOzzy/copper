@@ -1,0 +1,173 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
+
+// DATE "10/11/2020 21:33:38"
+
+// 
+// Device: Altera 5CEBA4F23C7 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module OneShot (
+	clk,
+	rst,
+	signalIn,
+	signalOut);
+input 	clk;
+input 	rst;
+input 	signalIn;
+output 	signalOut;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \signalOut~output_o ;
+wire \clk~input_o ;
+wire \signalIn~input_o ;
+wire \rst~input_o ;
+wire \laggedSignal~0_combout ;
+wire \laggedSignal~q ;
+wire \signalOut~0_combout ;
+
+
+cyclonev_io_obuf \signalOut~output (
+	.i(\signalOut~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\signalOut~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \signalOut~output .bus_hold = "false";
+defparam \signalOut~output .open_drain_output = "false";
+defparam \signalOut~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \clk~input (
+	.i(clk),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\clk~input_o ));
+// synopsys translate_off
+defparam \clk~input .bus_hold = "false";
+defparam \clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \signalIn~input (
+	.i(signalIn),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\signalIn~input_o ));
+// synopsys translate_off
+defparam \signalIn~input .bus_hold = "false";
+defparam \signalIn~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \rst~input (
+	.i(rst),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\rst~input_o ));
+// synopsys translate_off
+defparam \rst~input .bus_hold = "false";
+defparam \rst~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb \laggedSignal~0 (
+// Equation(s):
+// \laggedSignal~0_combout  = (\signalIn~input_o  & \rst~input_o )
+
+	.dataa(!\signalIn~input_o ),
+	.datab(!\rst~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\laggedSignal~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \laggedSignal~0 .extended_lut = "off";
+defparam \laggedSignal~0 .lut_mask = 64'h1111111111111111;
+defparam \laggedSignal~0 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas laggedSignal(
+	.clk(\clk~input_o ),
+	.d(\laggedSignal~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\laggedSignal~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam laggedSignal.is_wysiwyg = "true";
+defparam laggedSignal.power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \signalOut~0 (
+// Equation(s):
+// \signalOut~0_combout  = (!\laggedSignal~q  & \signalIn~input_o )
+
+	.dataa(!\laggedSignal~q ),
+	.datab(!\signalIn~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\signalOut~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \signalOut~0 .extended_lut = "off";
+defparam \signalOut~0 .lut_mask = 64'h2222222222222222;
+defparam \signalOut~0 .shared_arith = "off";
+// synopsys translate_on
+
+assign signalOut = \signalOut~output_o ;
+
+endmodule
