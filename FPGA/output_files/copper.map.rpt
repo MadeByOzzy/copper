@@ -1,5 +1,5 @@
 Analysis & Synthesis report for copper
-Sun Oct 11 21:33:13 2020
+Sun Oct 18 23:45:26 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,10 +13,14 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. State Machine - |copper|RS232_rx:inst5|STATE
+  9. State Machine - |copper|RS232_tx:inst4|STATE
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +47,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Oct 11 21:33:13 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sun Oct 18 23:45:26 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; copper                                      ;
-; Top-level Entity Name           ; OneShot                                     ;
+; Top-level Entity Name           ; copper                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1                                           ;
-; Total pins                      ; 4                                           ;
+; Total registers                 ; 170                                         ;
+; Total pins                      ; 63                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -69,7 +73,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; OneShot            ; copper             ;
+; Top-level entity name                                                           ; copper             ; copper             ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -159,20 +163,34 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; library/OneShot.v                ; yes             ; User Verilog HDL File  ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/OneShot.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
+; copper.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/copper.bdf                     ;         ;
+; library/OneSecondPeriodPulse.v   ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/OneSecondPeriodPulse.v ;         ;
+; library/General27bitCounter.v    ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/General27bitCounter.v  ;         ;
+; library/SevenSegmentDisplay.v    ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/SevenSegmentDisplay.v  ;         ;
+; library/General42bitCounter.v    ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/General42bitCounter.v  ;         ;
+; library/HexDecoder_Core.v        ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_Core.v      ;         ;
+; library/HexDecoder_RevB.v        ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevB.v      ;         ;
+; library/HexDecoder_RevC.v        ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevC.v      ;         ;
+; library/UnmapDisplays.v          ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/UnmapDisplays.v        ;         ;
+; library/GeneralLatch.v           ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/GeneralLatch.v         ;         ;
+; library/RS232_rx.v               ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_rx.v             ;         ;
+; library/RS232_tx.v               ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_tx.v             ;         ;
+; library/OneShot.v                ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/OneShot.v              ;         ;
+; library/ReceiveBuffer_revA.v     ; yes             ; User Verilog HDL File              ; C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/ReceiveBuffer_revA.v   ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -180,36 +198,88 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1              ;
+; Estimate of Logic utilization (ALMs needed) ; 98             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 2              ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 0              ;
-;     -- 5 input functions                    ; 0              ;
-;     -- 4 input functions                    ; 0              ;
-;     -- <=3 input functions                  ; 2              ;
+; Combinational ALUT usage for logic          ; 146            ;
+;     -- 7 input functions                    ; 2              ;
+;     -- 6 input functions                    ; 20             ;
+;     -- 5 input functions                    ; 20             ;
+;     -- 4 input functions                    ; 46             ;
+;     -- <=3 input functions                  ; 58             ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 1              ;
+; Dedicated logic registers                   ; 170            ;
 ;                                             ;                ;
-; I/O pins                                    ; 4              ;
+; I/O pins                                    ; 63             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
-; Maximum fan-out node                        ; signalIn~input ;
-; Maximum fan-out                             ; 2              ;
-; Total fan-out                               ; 11             ;
-; Average fan-out                             ; 1.00           ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 170            ;
+; Total fan-out                               ; 1169           ;
+; Average fan-out                             ; 2.64           ;
 +---------------------------------------------+----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |OneShot                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 4    ; 0            ; |OneShot            ; OneShot     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                      ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                            ; Entity Name          ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
+; |copper                                  ; 146 (0)             ; 170 (0)                   ; 0                 ; 0          ; 63   ; 0            ; |copper                                                        ; copper               ; work         ;
+;    |GeneralLatch:inst12|                 ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|GeneralLatch:inst12                                    ; GeneralLatch         ; work         ;
+;    |HexDecoder_RevC:inst8|               ; 42 (0)              ; 42 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8                                  ; HexDecoder_RevC      ; work         ;
+;       |HexDecoder_Core:makeCore[0].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[1].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[1].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[2].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[2].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[3].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[3].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[4].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[4].inst ; HexDecoder_Core      ; work         ;
+;       |HexDecoder_Core:makeCore[5].inst| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[5].inst ; HexDecoder_Core      ; work         ;
+;    |OneSecondPeriodPulse:inst2|          ; 33 (33)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|OneSecondPeriodPulse:inst2                             ; OneSecondPeriodPulse ; work         ;
+;    |RS232_rx:inst5|                      ; 36 (36)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|RS232_rx:inst5                                         ; RS232_rx             ; work         ;
+;    |RS232_tx:inst4|                      ; 29 (29)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|RS232_tx:inst4                                         ; RS232_tx             ; work         ;
+;    |ReceiveBuffer_revA:inst11|           ; 5 (5)               ; 51 (50)                   ; 0                 ; 0          ; 0    ; 0            ; |copper|ReceiveBuffer_revA:inst11                              ; ReceiveBuffer_revA   ; work         ;
+;       |OneShot:oneShotInstance|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |copper|ReceiveBuffer_revA:inst11|OneShot:oneShotInstance      ; OneShot              ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------+
+; State Machine - |copper|RS232_rx:inst5|STATE                               ;
++---------------+--------------+--------------+---------------+--------------+
+; Name          ; STATE.s_stop ; STATE.s_read ; STATE.s_start ; STATE.s_idle ;
++---------------+--------------+--------------+---------------+--------------+
+; STATE.s_idle  ; 0            ; 0            ; 0             ; 0            ;
+; STATE.s_start ; 0            ; 0            ; 1             ; 1            ;
+; STATE.s_read  ; 0            ; 1            ; 0             ; 1            ;
+; STATE.s_stop  ; 1            ; 0            ; 0             ; 1            ;
++---------------+--------------+--------------+---------------+--------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |copper|RS232_tx:inst4|STATE                                ;
++---------------+--------------+---------------+---------------+--------------+
+; Name          ; STATE.s_stop ; STATE.s_write ; STATE.s_start ; STATE.s_idle ;
++---------------+--------------+---------------+---------------+--------------+
+; STATE.s_idle  ; 0            ; 0             ; 0             ; 0            ;
+; STATE.s_start ; 0            ; 0             ; 1             ; 1            ;
+; STATE.s_write ; 0            ; 1             ; 0             ; 1            ;
+; STATE.s_stop  ; 1            ; 0             ; 0             ; 1            ;
++---------------+--------------+---------------+---------------+--------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; RS232_rx:inst5|STATE~2                ; Lost fanout        ;
+; RS232_rx:inst5|STATE~3                ; Lost fanout        ;
+; RS232_tx:inst4|STATE~2                ; Lost fanout        ;
+; RS232_tx:inst4|STATE~3                ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -217,14 +287,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 170   ;
+; Number of registers using Synchronous Clear  ; 100   ;
+; Number of registers using Synchronous Load   ; 43    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 41    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |copper|RS232_tx:inst4|latchedData[1]           ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |copper|OneSecondPeriodPulse:inst2|count[18]    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |copper|ReceiveBuffer_revA:inst11|activeByte[0] ;
+; 6:1                ; 9 bits    ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |copper|RS232_rx:inst5|counter[1]               ;
+; 6:1                ; 9 bits    ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |copper|RS232_tx:inst4|counter[8]               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -232,15 +315,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1                           ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 2                           ;
-;     normal            ; 2                           ;
-;         2 data inputs ; 2                           ;
-; boundary_port         ; 4                           ;
+; arriav_ff             ; 170                         ;
+;     ENA               ; 24                          ;
+;     ENA SCLR          ; 17                          ;
+;     SCLR              ; 83                          ;
+;     SLD               ; 43                          ;
+;     plain             ; 3                           ;
+; arriav_lcell_comb     ; 147                         ;
+;     arith             ; 43                          ;
+;         1 data inputs ; 43                          ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 102                         ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 46                          ;
+;         5 data inputs ; 20                          ;
+;         6 data inputs ; 20                          ;
+; boundary_port         ; 63                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.83                        ;
+; Max LUT depth         ; 3.40                        ;
+; Average LUT depth     ; 1.65                        ;
 +-----------------------+-----------------------------+
 
 
@@ -249,7 +345,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -259,10 +355,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Oct 11 21:32:57 2020
+    Info: Processing started: Sun Oct 18 23:45:08 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off copper -c copper
-Warning (125092): Tcl Script File demoRAM.qip not found
-    Info (125063): set_global_assignment -name QIP_FILE demoRAM.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file copper.bdf
@@ -295,18 +389,85 @@ Info (12021): Found 1 design units, including 1 entities, in source file library
     Info (12023): Found entity 1: RS232_tx File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_tx.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file library/oneshot.v
     Info (12023): Found entity 1: OneShot File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/OneShot.v Line: 2
-Info (12127): Elaborating entity "OneShot" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file library/receivebuffer_reva.v
+    Info (12023): Found entity 1: ReceiveBuffer_revA File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/ReceiveBuffer_revA.v Line: 2
+Info (12127): Elaborating entity "copper" for the top level hierarchy
+Warning (275080): Converted elements in bus name "HEX0" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "HEX0[6..0]" to "HEX06..0"
+Warning (275080): Converted elements in bus name "HEX1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "HEX1[6..0]" to "HEX16..0"
+Warning (275080): Converted elements in bus name "HEX2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "HEX2[6..0]" to "HEX26..0"
+Warning (275080): Converted elements in bus name "HEX3" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "HEX3[6..0]" to "HEX36..0"
+Warning (275080): Converted elements in bus name "HEX4" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "HEX4[6..0]" to "HEX46..0"
+Warning (275080): Converted elements in bus name "HEX5" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "HEX5[6..0]" to "HEX56..0"
+Warning (275043): Pin "LEDR2" is missing source
+Warning (275043): Pin "LEDR3" is missing source
+Warning (275043): Pin "LEDR4" is missing source
+Warning (275043): Pin "LEDR6" is missing source
+Warning (275043): Pin "LEDR7" is missing source
+Warning (275043): Pin "LEDR8" is missing source
+Warning (275043): Pin "LEDR9" is missing source
+Warning (275009): Pin "KEY1" not connected
+Warning (275009): Pin "KEY2" not connected
+Warning (275009): Pin "KEY3" not connected
+Warning (275009): Pin "CLOCK2_50" not connected
+Warning (275009): Pin "CLOCK3_50" not connected
+Warning (275009): Pin "CLOCK4_50" not connected
+Info (12128): Elaborating entity "OneSecondPeriodPulse" for hierarchy "OneSecondPeriodPulse:inst2"
+Warning (10230): Verilog HDL assignment warning at OneSecondPeriodPulse.v(30): truncated value with size 32 to match size of target (25) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/OneSecondPeriodPulse.v Line: 30
+Info (12128): Elaborating entity "GeneralLatch" for hierarchy "GeneralLatch:inst12"
+Info (12128): Elaborating entity "RS232_tx" for hierarchy "RS232_tx:inst4"
+Warning (10230): Verilog HDL assignment warning at RS232_tx.v(67): truncated value with size 32 to match size of target (9) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_tx.v Line: 67
+Warning (10230): Verilog HDL assignment warning at RS232_tx.v(79): truncated value with size 32 to match size of target (3) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_tx.v Line: 79
+Warning (10230): Verilog HDL assignment warning at RS232_tx.v(95): truncated value with size 32 to match size of target (9) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_tx.v Line: 95
+Warning (10230): Verilog HDL assignment warning at RS232_tx.v(113): truncated value with size 32 to match size of target (9) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_tx.v Line: 113
+Info (12128): Elaborating entity "RS232_rx" for hierarchy "RS232_rx:inst5"
+Warning (10230): Verilog HDL assignment warning at RS232_rx.v(67): truncated value with size 32 to match size of target (9) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_rx.v Line: 67
+Warning (10230): Verilog HDL assignment warning at RS232_rx.v(78): truncated value with size 32 to match size of target (3) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_rx.v Line: 78
+Warning (10230): Verilog HDL assignment warning at RS232_rx.v(94): truncated value with size 32 to match size of target (9) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_rx.v Line: 94
+Warning (10230): Verilog HDL assignment warning at RS232_rx.v(114): truncated value with size 32 to match size of target (9) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/RS232_rx.v Line: 114
+Info (12128): Elaborating entity "UnmapDisplays" for hierarchy "UnmapDisplays:inst9"
+Info (12128): Elaborating entity "HexDecoder_RevC" for hierarchy "HexDecoder_RevC:inst8"
+Info (12128): Elaborating entity "HexDecoder_Core" for hierarchy "HexDecoder_RevC:inst8|HexDecoder_Core:makeCore[0].inst" File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/HexDecoder_RevC.v Line: 42
+Info (12128): Elaborating entity "ReceiveBuffer_revA" for hierarchy "ReceiveBuffer_revA:inst11"
+Warning (10230): Verilog HDL assignment warning at ReceiveBuffer_revA.v(30): truncated value with size 32 to match size of target (2) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/ReceiveBuffer_revA.v Line: 30
+Info (12128): Elaborating entity "OneShot" for hierarchy "ReceiveBuffer_revA:inst11|OneShot:oneShotInstance" File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/ReceiveBuffer_revA.v Line: 78
+Info (12128): Elaborating entity "SevenSegmentDisplay_RevA" for hierarchy "SevenSegmentDisplay_RevA:inst1"
+Info (12128): Elaborating entity "General42bitCounter" for hierarchy "General42bitCounter:inst13"
+Info (12128): Elaborating entity "General27bitCounter" for hierarchy "General27bitCounter:inst3"
+Warning (10230): Verilog HDL assignment warning at General27bitCounter.v(16): truncated value with size 32 to match size of target (27) File: C:/Users/oenri/Desktop/YouTube/copper/FPGA/library/General27bitCounter.v Line: 16
+Info (12128): Elaborating entity "HexDecoder_RevB" for hierarchy "HexDecoder_RevB:inst7"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR2" is stuck at GND
+    Warning (13410): Pin "LEDR3" is stuck at GND
+    Warning (13410): Pin "LEDR4" is stuck at GND
+    Warning (13410): Pin "LEDR6" is stuck at GND
+    Warning (13410): Pin "LEDR7" is stuck at GND
+    Warning (13410): Pin "LEDR8" is stuck at GND
+    Warning (13410): Pin "LEDR9" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 2 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4840 megabytes
-    Info: Processing ended: Sun Oct 11 21:33:13 2020
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:37
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY1"
+    Warning (15610): No output dependent on input pin "KEY2"
+    Warning (15610): No output dependent on input pin "KEY3"
+    Warning (15610): No output dependent on input pin "CLOCK2_50"
+    Warning (15610): No output dependent on input pin "CLOCK3_50"
+    Warning (15610): No output dependent on input pin "CLOCK4_50"
+Info (21057): Implemented 266 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 53 output pins
+    Info (21061): Implemented 203 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 4867 megabytes
+    Info: Processing ended: Sun Oct 18 23:45:26 2020
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:39
 
 

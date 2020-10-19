@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Oct 11 21:33:13 2020
+Analysis & Synthesis Status : Successful - Sun Oct 18 23:45:26 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : copper
-Top-level Entity Name : OneShot
+Top-level Entity Name : copper
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 1
-Total pins : 4
+Total registers : 170
+Total pins : 63
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

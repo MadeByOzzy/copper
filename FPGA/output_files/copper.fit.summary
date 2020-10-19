@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Sep 29 20:46:46 2020
+Fitter Status : Successful - Sun Oct 18 23:46:12 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : copper
 Top-level Entity Name : copper
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 98 / 18,480 ( < 1 % )
-Total registers : 153
+Logic utilization (in ALMs) : 85 / 18,480 ( < 1 % )
+Total registers : 170
 Total pins : 63 / 224 ( 28 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )
