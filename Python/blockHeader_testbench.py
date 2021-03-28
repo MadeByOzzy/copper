@@ -1,3 +1,20 @@
+"""
+    MadeByOzzy
+    video for this script:
+    https://www.youtube.com/watch?v=LwW4F60mThk
+
+    Support:
+    Bitcoin
+    1P4kBPyFoR6xa4sy2hnHL3oY6sg4PrXn6M
+    Digibyte
+    DMgbQqZ9Vr7KrCxd7LrPJE5kWYHZX7DTTW
+    Monero
+    46NQaqW3ZNvUt3DCSxLLLyHpaVMSbwLqS3tHmhVLrafXU3K2crb12qK4PfN7kaHkaLcSTs9cCX1NMPsaCnSMhkRACWzxmax
+
+    Contact:
+    madebyozzy@gmail.com
+"""
+
 import hashlib
 import codecs
 import struct
