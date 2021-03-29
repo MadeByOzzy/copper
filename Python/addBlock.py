@@ -1,5 +1,7 @@
 """
     MadeByOzzy
+    video for this module:
+    https://www.youtube.com/watch?v=tsPNABVahQw
 
     Support:
     Bitcoin
