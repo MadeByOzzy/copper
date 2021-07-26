@@ -22,7 +22,7 @@ import time
 import requests
 import json
 
-message = "https://twitter.com/coolshoeshine2"
+message = "https://cypherpunkuniversity.com/"
 bits = 0x1f0000f0
 
 # calculate difficulty from bits
@@ -32,7 +32,7 @@ diff = mantissa << (8 * (exponent - 3))
 diffInBytes = diff.to_bytes(32, 'big')
 
 # request last block info from url
-API_URL = "https://www.madebyozzy.com/powchain-api/"
+API_URL = "https://www.madebyozzy.com/powchain/api"
 response = requests.get(API_URL)
 json_string = response.text
 block = json.loads(json_string)
